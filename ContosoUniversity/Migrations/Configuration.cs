@@ -38,7 +38,8 @@ namespace ContosoUniversity.Migrations
                 new Course {CourseID = 1045, Title = "Calculus", Credits = 4, },
                 new Course {CourseID = 3141, Title = "Trigonometry", Credits = 4, },
                 new Course {CourseID = 2021, Title = "Composition", Credits = 3, },
-                new Course {CourseID = 2042, Title = "Literature", Credits = 4, }
+                new Course {CourseID = 2042, Title = "Literature", Credits = 4, },
+                new Course {CourseID = 1070, Title = "Volleyball", Credits = 2, }
             };
             courses.ForEach(s => context.Courses.AddOrUpdate(p => p.Title, s));
             context.SaveChanges();
@@ -56,6 +57,8 @@ namespace ContosoUniversity.Migrations
                 new Enrollment { StudentID = students.Single(s => s.LastName == "Alonso").ID,
                     CourseID = courses.Single(c => c.Title == "Trigonometry" ).CourseID, Grade = Grade.B },
                 new Enrollment { StudentID = students.Single(s => s.LastName == "Alonso").ID,
+                    CourseID = courses.Single(c => c.Title == "Volleyball" ).CourseID, Grade = Grade.D },
+                new Enrollment { StudentID = students.Single(s => s.LastName == "Alonso").ID,
                     CourseID = courses.Single(c => c.Title == "Composition" ).CourseID, Grade = Grade.B },
                 new Enrollment { StudentID = students.Single(s => s.LastName == "Anand").ID,
                     CourseID = courses.Single(c => c.Title == "Chemistry" ).CourseID },
@@ -65,6 +68,8 @@ namespace ContosoUniversity.Migrations
                     CourseID = courses.Single(c => c.Title == "Chemistry").CourseID, Grade = Grade.B },
                 new Enrollment { StudentID = students.Single(s => s.LastName == "Li").ID,
                     CourseID = courses.Single(c => c.Title == "Composition").CourseID, Grade = Grade.B },
+                new Enrollment { StudentID = students.Single(s => s.LastName == "Li").ID,
+                    CourseID = courses.Single(c => c.Title == "Volleyball").CourseID, Grade = Grade.A },
                 new Enrollment { StudentID = students.Single(s => s.LastName == "Justice").ID,
                     CourseID = courses.Single(c => c.Title == "Literature").CourseID, Grade = Grade.B }
             };
