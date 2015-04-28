@@ -39,7 +39,7 @@ namespace ContosoUniversity.Migrations
                 new Course {CourseID = 3141, Title = "Trigonometry", Credits = 4, },
                 new Course {CourseID = 2021, Title = "Composition", Credits = 3, },
                 new Course {CourseID = 2042, Title = "Literature", Credits = 4, },
-                new Course {CourseID = 1070, Title = "Volleyball", Credits = 2, }
+                new Course {CourseID = 5070, Title = "Volleyball", Credits = 2, }
             };
             courses.ForEach(s => context.Courses.AddOrUpdate(p => p.Title, s));
             context.SaveChanges();

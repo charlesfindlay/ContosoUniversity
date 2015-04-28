@@ -53,7 +53,7 @@ namespace ContosoUniversity.Helper
             }
             else
             {
-                gpa = points / totalCredits;
+                gpa = Math.Round((points / totalCredits), 2, MidpointRounding.AwayFromZero);
                 return gpa;
             }
 
